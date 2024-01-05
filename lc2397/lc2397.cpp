@@ -13,30 +13,18 @@ int main(int argc, char **argv)
 
 int maximumRows(vector<vector<int>> &matrix, int numSelect)
 {
-	vector<int> sum;
-	int rowsCovered = 0;
+	int rows = matrix.size();
+	int cols = matrix[0].size();
 
-	for (vector<int> i : matrix)
+	if (rows == 0)
 	{
-		int rowSum = 0;
-		for (int j : i)
-		{
-			rowSum += j;
-		}
-		sum.push_back(rowSum);
+		return 0;
 	}
 
-	int maxRowSum = 0;
-	for (int i : sum)
+	if (cols == 0)
 	{
-		if(i > maxRowSum)
-		{
-			maxRowSum = i;
-		}
-		
-		if (i == 0)
-		{
-			++rowsCovered;
-		}
+		return 0;
 	}
+
+	
 }
