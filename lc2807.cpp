@@ -62,13 +62,10 @@ int main(int argc, char** argv) {
 ListNode* insertGreatestCommonDivisors(ListNode* head) {
   ListNode* copy = head;
 
-  while (copy != nullptr) {
-    if (copy->next != nullptr) {
-      int gcd = GCD(copy->val, copy->next->val);
-      ListNode* temp = new ListNode(0, copy->next);
-      copy->next = temp;
-    }
-
+  while (copy->next != nullptr) {
+    int gcd = GCD(copy->val, copy->next->val);
+    ListNode* temp = new ListNode(gcd, copy->next);
+    copy->next = temp;
     copy = copy->next->next;
   }
 
