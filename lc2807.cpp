@@ -11,6 +11,7 @@ struct ListNode {
 };
 
 ListNode* insertGreatestCommonDivisors(ListNode* head);
+int GCD(int a, int b);
 
 int main(int argc, char** argv) {
   // Get user input
@@ -63,7 +64,7 @@ ListNode* insertGreatestCommonDivisors(ListNode* head) {
 
   while (copy != nullptr) {
     if (copy->next != nullptr) {
-      int gcd = 0;
+      int gcd = GCD(copy->val, copy->next->val);
       ListNode* temp = new ListNode(0, copy->next);
       copy->next = temp;
     }
@@ -72,4 +73,13 @@ ListNode* insertGreatestCommonDivisors(ListNode* head) {
   }
 
   return head;
+}
+
+int GCD(int a, int b) {
+  if (b) {
+    while ((a %= b) && (b %= a))
+      ;
+    return a + b;
+  }
+  return 0;
 }
