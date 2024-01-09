@@ -9,6 +9,7 @@
 * Maybe put files for a same questions in a directory.
 
 ## Undone problems: 
+* lc1
 * lc447
 * lc1944
 * lc2397
