@@ -12,10 +12,5 @@
 
 ## Undone problems: 
 
-- lc1
 - lc56 (It works, but it occupied too much heap memory)
-- lc447
-- lc1944
-- lc2182
-- lc2397
-- lc2707
+
