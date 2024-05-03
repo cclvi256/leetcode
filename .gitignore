@@ -4,3 +4,8 @@
 # Ignore .vscode directory
 .vscode/
 test/
+
+
+# Added by cargo
+
+/target
