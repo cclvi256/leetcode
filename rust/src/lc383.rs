@@ -1,5 +1,5 @@
 pub fn can_construct(ransom_note: String, magazine: String) -> bool {
-    let mut count = vec![0; 26];
+    let mut count = [0; 26];
     for i in magazine.chars() {
         count[i as usize - 'a' as usize] += 1;
     }
