@@ -1,4 +1,4 @@
-package main
+package leetcode
 
 import "fmt"
 
@@ -19,7 +19,7 @@ func twoSum(nums []int, target int) []int {
 	return []int{}
 }
 
-func main() {
+func lc1_run() {
 	var array_len int;
 	fmt.Printf("Enter array length: ");
 	fmt.Scan(&array_len)
