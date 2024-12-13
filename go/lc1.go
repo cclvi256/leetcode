@@ -20,8 +20,8 @@ func twoSum(nums []int, target int) []int {
 }
 
 func lc1_run() {
-	var array_len int;
-	fmt.Printf("Enter array length: ");
+	var array_len int
+	fmt.Printf("Enter array length: ")
 	fmt.Scan(&array_len)
 
 	nums := make([]int, array_len)

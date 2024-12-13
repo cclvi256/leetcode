@@ -21,5 +21,5 @@ func unidirectional_isomprphic(s string, t string) bool {
 }
 
 func lc205_run() {
-	
+
 }
