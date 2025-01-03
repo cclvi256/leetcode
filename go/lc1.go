@@ -19,7 +19,7 @@ func twoSum(nums []int, target int) []int {
 	return []int{}
 }
 
-func lc1_run() {
+func _() {
 	var array_len int
 	fmt.Printf("Enter array length: ")
 	fmt.Scan(&array_len)

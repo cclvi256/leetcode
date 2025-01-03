@@ -20,6 +20,7 @@ func unidirectional_isomprphic(s string, t string) bool {
 	return true
 }
 
-func lc205_run() {
-
+func _() {
+	result := isIsomorphic("egg", "add")
+	println(result)
 }

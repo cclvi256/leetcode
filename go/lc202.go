@@ -30,3 +30,8 @@ func square_sum(nums []int) int {
 	}
 	return sum
 }
+
+func _() {
+	result := isHappy(19)
+	println(result)
+}

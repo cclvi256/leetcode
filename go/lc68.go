@@ -56,26 +56,31 @@ func (l *line) reset() {
 
 func fullJustify(words []string, maxWidth int) []string {
 	l := line{maxLength: maxWidth}
-	res := make([]string, 0)
+	res := []string{}
 
 	for _, word := range words {
 		if !l.addWord(word) {
 			res = append(res, l.construct())
 			l.reset()
 			l.addWord(word)
-		} else {
-			l.characters += len(word)
 		}
 	}
 
 	if l.wordCount > 0 {
-		res = append(res, l.construct())
+		lastLine := ""
+		for _, word := range l.words {
+			lastLine += word + " "
+		}
+
+		lastLine = strings.TrimRight(lastLine, " ")
+		lastLine += strings.Repeat(" ", maxWidth-len(lastLine))
+		res = append(res, lastLine)
 	}
 
 	return res
 }
 
-func main () {
+func _() {
 	words := []string{"This", "is", "an", "example", "of", "text", "justification."}
 	maxWidth := 16
 	fmt.Println(fullJustify(words, maxWidth))

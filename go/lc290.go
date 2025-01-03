@@ -33,6 +33,7 @@ func wordPattern(pattern string, s string) bool {
 	return true
 }
 
-func lc290_run() {
-
+func _() {
+	result := wordPattern("abba", "dog cat cat dog")
+	println(result)
 }

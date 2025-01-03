@@ -16,3 +16,10 @@ func containsNearbyDuplicate(nums []int, k int) bool {
 
 	return false
 }
+
+func _() {
+	nums := []int{1, 2, 3, 1}
+	k := 3
+	result := containsNearbyDuplicate(nums, k)
+	println(result)
+}

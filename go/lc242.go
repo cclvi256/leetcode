@@ -19,3 +19,10 @@ func isAnagram(s string, t string) bool {
 
 	return true
 }
+
+func _() {
+	s := "anagram"
+	t := "nagaram"
+	result := isAnagram(s, t)
+	println(result)
+}
