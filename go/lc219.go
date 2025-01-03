@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func containsNearbyDuplicate(nums []int, k int) bool {
 	if len(nums) <= 1 {

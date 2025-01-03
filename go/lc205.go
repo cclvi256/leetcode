@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func isIsomorphic(s string, t string) bool {
 	return unidirectional_isomprphic(s, t) && unidirectional_isomprphic(t, s)

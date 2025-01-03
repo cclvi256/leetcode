@@ -1,4 +1,4 @@
-package leetcode
+package main
 
 func longestConsecutive(nums []int) int {
 	numSet := make(map[int]bool)
