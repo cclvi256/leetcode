@@ -20,7 +20,7 @@ int smallestValue(int n) {
   return newNum;
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
   int input;
   cout << "Enter a number: ";
   cin >> input;

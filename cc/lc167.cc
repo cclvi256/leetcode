@@ -3,9 +3,9 @@
 
 using namespace std;
 
-vector<int> twoSum(vector<int>& numbers, int target);
+vector<int> twoSum(vector<int> &numbers, int target);
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
   vector<int> numbers;
   int target;
 
@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
   return 0;
 }
 
-vector<int> twoSum(vector<int>& numbers, int target) {
+vector<int> twoSum(vector<int> &numbers, int target) {
   int index2;
   for (index2 = 1; index2 < numbers.size(); ++index2) {
     if (numbers[0] + numbers[index2] >= target) {

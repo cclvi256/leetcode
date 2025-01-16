@@ -5,17 +5,17 @@ using namespace std;
 
 struct ListNode {
   int val;
-  ListNode* next;
+  ListNode *next;
   ListNode() : val(0), next(nullptr) {}
   ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode* next) : val(x), next(next) {}
+  ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-ListNode* deleteDuplicates(ListNode* head) {
+ListNode *deleteDuplicates(ListNode *head) {
   if (head && head->next) {
     bool first = true;
-    ListNode* curr = nullptr;
-    ListNode* res = nullptr;
+    ListNode *curr = nullptr;
+    ListNode *res = nullptr;
 
     bool duplicated = false;
     int duplicate = 0;
@@ -53,7 +53,7 @@ ListNode* deleteDuplicates(ListNode* head) {
   }
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
   // Create a linked list from user input
   std::cout << "Enter the elements of the linked list (enter -1 to stop): ";
   int num;
@@ -63,10 +63,10 @@ int main(int argc, char** argv) {
   }
 
   // Create the linked list
-  ListNode* head = nullptr;
-  ListNode* tail = nullptr;
+  ListNode *head = nullptr;
+  ListNode *tail = nullptr;
   for (int num : nums) {
-    ListNode* newNode = new ListNode(num);
+    ListNode *newNode = new ListNode(num);
     if (head == nullptr) {
       head = newNode;
       tail = newNode;
@@ -77,11 +77,11 @@ int main(int argc, char** argv) {
   }
 
   // Call the deleteDuplicates function
-  ListNode* result = deleteDuplicates(head);
+  ListNode *result = deleteDuplicates(head);
 
   // Print the resulting linked list
   std::cout << "Resulting linked list: ";
-  ListNode* curr = result;
+  ListNode *curr = result;
   while (curr != nullptr) {
     std::cout << curr->val << " ";
     curr = curr->next;
@@ -91,7 +91,7 @@ int main(int argc, char** argv) {
   // Clean up the linked list
   curr = result;
   while (curr != nullptr) {
-    ListNode* temp = curr;
+    ListNode *temp = curr;
     curr = curr->next;
     delete temp;
   }

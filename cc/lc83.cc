@@ -4,16 +4,16 @@ using namespace std;
 
 struct ListNode {
   int val;
-  ListNode* next;
+  ListNode *next;
   ListNode() : val(0), next(nullptr) {}
   ListNode(int x) : val(x), next(nullptr) {}
-  ListNode(int x, ListNode* next) : val(x), next(next) {}
+  ListNode(int x, ListNode *next) : val(x), next(next) {}
 };
 
-ListNode* deleteDuplicates(ListNode* head) {
+ListNode *deleteDuplicates(ListNode *head) {
   if (head != nullptr) {
-    ListNode* res = nullptr;
-    ListNode* curr = nullptr;
+    ListNode *res = nullptr;
+    ListNode *curr = nullptr;
 
     while (head->next != nullptr) {
       if (head->val != head->next->val) {
@@ -39,10 +39,10 @@ ListNode* deleteDuplicates(ListNode* head) {
   }
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
   // Test case for deleteDuplicates function
-  ListNode* head = nullptr;
-  ListNode* tail = nullptr;
+  ListNode *head = nullptr;
+  ListNode *tail = nullptr;
 
   // Get input from the user
   int n;
@@ -54,7 +54,7 @@ int main(int argc, char** argv) {
     int val;
     std::cin >> val;
 
-    ListNode* newNode = new ListNode(val);
+    ListNode *newNode = new ListNode(val);
     if (head == nullptr) {
       head = newNode;
       tail = newNode;
@@ -65,11 +65,11 @@ int main(int argc, char** argv) {
   }
 
   // Call the deleteDuplicates function
-  ListNode* result = deleteDuplicates(head);
+  ListNode *result = deleteDuplicates(head);
 
   // Print the result
   std::cout << "Result: ";
-  ListNode* current = result;
+  ListNode *current = result;
   while (current != nullptr) {
     std::cout << current->val << " ";
     current = current->next;
@@ -79,7 +79,7 @@ int main(int argc, char** argv) {
   // Clean up the memory
   current = result;
   while (current != nullptr) {
-    ListNode* temp = current;
+    ListNode *temp = current;
     current = current->next;
     delete temp;
   }

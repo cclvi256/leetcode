@@ -1,6 +1,6 @@
+#include <algorithm>
 #include <iostream>
 #include <vector>
-#include <algorithm>
 
 using namespace std;
 
@@ -13,18 +13,18 @@ struct boundary {
   ~boundary() {}
 };
 
-vector<vector<int>> merge(vector<vector<int>>& intervals);
+vector<vector<int>> merge(vector<vector<int>> &intervals);
 
-void sortBoundaries(vector<boundary>& boundaries);
+void sortBoundaries(vector<boundary> &boundaries);
 
-bool compareBoundaries(const boundary& b1, const boundary& b2) {
+bool compareBoundaries(const boundary &b1, const boundary &b2) {
   if (b1.value == b2.value) {
     return b1.direction;
   }
   return b1.value < b2.value;
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
   int n;
   cout << "Enter the number of intervals: ";
   cin >> n;
@@ -48,11 +48,11 @@ int main(int argc, char** argv) {
   return 0;
 }
 
-vector<vector<int>> merge(vector<vector<int>>& intervals) {
+vector<vector<int>> merge(vector<vector<int>> &intervals) {
   vector<boundary> boundaries;
   vector<vector<int>> res;
-  
-  for(vector<int> i : intervals) {
+
+  for (vector<int> i : intervals) {
     boundary start(i[0], true);
     boundary end(i[1], false);
     boundaries.push_back(start);
@@ -63,14 +63,14 @@ vector<vector<int>> merge(vector<vector<int>>& intervals) {
   int depth = 0;
   int start;
 
-  for(boundary i : boundaries) {
+  for (boundary i : boundaries) {
     if (depth == 0) {
       start = i.value;
     }
 
-    depth += i.direction?1:-1;
+    depth += i.direction ? 1 : -1;
 
-    if(depth == 0) {
+    if (depth == 0) {
       res.push_back({start, i.value});
     }
   }
@@ -78,6 +78,6 @@ vector<vector<int>> merge(vector<vector<int>>& intervals) {
   return res;
 }
 
-void sortBoundaries(vector<boundary>& boundaries) {
+void sortBoundaries(vector<boundary> &boundaries) {
   sort(boundaries.begin(), boundaries.end(), compareBoundaries);
 }

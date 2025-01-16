@@ -16,7 +16,7 @@ int addMinimum(string word) {
   return sum;
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
   std::string input;
   std::cout << "Enter a string using only a, b, and c: ";
   std::cin >> input;

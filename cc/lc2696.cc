@@ -16,7 +16,7 @@ int minLength(string s) {
   return s.length();
 }
 
-int main(int argc, char** argv) {
+int main(int argc, char **argv) {
   std::string input;
   std::cout << "Enter a string: ";
   std::cin >> input;

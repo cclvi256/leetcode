@@ -3,7 +3,7 @@
 
 using namespace std;
 
-int maxProfit(vector<int>& prices);
+int maxProfit(vector<int> &prices);
 
 int maxProfit(vector<int> &prices) {
   int n = prices.size();
@@ -26,21 +26,21 @@ int maxProfit(vector<int> &prices) {
 }
 
 int main(int argc, char **argv) {
-	int n;
-	cout << "Enter the number of days: ";
-	cin >> n;
+  int n;
+  cout << "Enter the number of days: ";
+  cin >> n;
 
-	vector<int> prices;
-	cout << "Enter the prices of the stock for each day: " << endl;
-	for (int i = 0; i < n; i++) {
-		int price;
-		cin >> price;
-		prices.push_back(price);
-	}
+  vector<int> prices;
+  cout << "Enter the prices of the stock for each day: " << endl;
+  for (int i = 0; i < n; i++) {
+    int price;
+    cin >> price;
+    prices.push_back(price);
+  }
 
-	int maxProfitValue = maxProfit(prices);
+  int maxProfitValue = maxProfit(prices);
 
-	cout << "Max Profit: " << maxProfitValue << endl;
+  cout << "Max Profit: " << maxProfitValue << endl;
 
-	return 0;
+  return 0;
 }
