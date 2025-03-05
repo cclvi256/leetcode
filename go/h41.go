@@ -34,7 +34,7 @@ func abs(num int) int {
 	return num
 }
 
-func main() {
+func _() {
 	var array_len int
 	fmt.Printf("Enter array length: ")
 	fmt.Scan(&array_len)
